@@ -26,7 +26,7 @@ You will need the following installed on your local machine
 
 Setup python virtual environmet
 ```bash
-python -m venv env
+python3 -m venv env
 ```
 
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 
 Activate environment for Linux/macos
-```
+```bash
 source env/bin/activate
 ```
 
@@ -50,7 +50,7 @@ docker compose up -d
 ```
 4. Run main python program
 ```bash
-python app/main.py
+python3 app/main.py
 ```
 The main.py script contains the logic to  fetch, process, and store messages.
 
