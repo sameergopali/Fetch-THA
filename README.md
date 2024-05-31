@@ -24,10 +24,25 @@ You will need the following installed on your local machine
 2. Psql - [install](https://www.postgresql.org/download/)
 3. python3
 
+Setup python virtual environmet
+```bash
+python -m venv env
+```
+
 
 Install python dependencies
 ```bash
 pip install -r requirements.txt
+```
+
+Activate environment for Linux/macos
+```
+source env/bin/activate
+```
+
+Activate enviornment for Windows
+```
+env\Scripts\activate
 ```
 3. Run docker containers:
 ```bash
