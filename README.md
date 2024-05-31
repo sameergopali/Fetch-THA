@@ -22,6 +22,7 @@ cd Fetch-THA
 You will need the following installed on your local machine
 1. docker -- docker [install guide](https://docs.docker.com/get-docker/)
 2. Psql - [install](https://www.postgresql.org/download/)
+3. python3
 
 
 Install python dependencies
@@ -36,7 +37,7 @@ docker compose up -d
 ```bash
 python app/main.py
 ```
-The main.py script contains the logic to continuously fetch, process, and store messages.
+The main.py script contains the logic to  fetch, process, and store messages.
 
 5. For Checking the final output, connect to postges and query the user_logins table
 ```bash
