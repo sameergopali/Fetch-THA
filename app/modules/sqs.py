@@ -4,7 +4,7 @@ from loguru import logger
 class SqsClient:
     '''Client class to manage interactions with Amazon SQS.'''
     
-    def __init__(self, endpoint_url,region_name='us-east-1'):
+    def __init__(self, endpoint_url,aws_secret_key, aws_access_key,region_name='us-east-1'):
         '''
         Initialize the SqsClient with the necessary connection details.
 
@@ -14,13 +14,19 @@ class SqsClient:
         self.region_name = region_name
         self.sqs = None
         self.endpoint_url =  endpoint_url
+        self.aws_access_key = aws_access_key
+        self.aws_secret_key = aws_secret_key
 
     def connect(self):
         '''
         Establish a connection to the Amazon SQS service.
         '''
         try:
-            self.sqs = boto3.client('sqs', endpoint_url = self.endpoint_url,region_name=self.region_name)
+            self.sqs = boto3.client('sqs', 
+                                    endpoint_url = self.endpoint_url,
+                                    aws_access_key_id = self.aws_access_key, 
+                                    aws_secret_access_key = self.aws_secret_key,
+                                    region_name=self.region_name)
             logger.info('Connected to SQS')
         except Exception as err:
             logger.error('Error connecting to SQS: {}',err)

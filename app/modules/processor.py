@@ -8,7 +8,7 @@ from loguru import logger
 class Processor:
     """Processor class to handle masking and processing of message data."""
 
-    def __init__(self, masked_fields=['user_id','ip']):
+    def __init__(self, masked_fields=['device_id','ip']):
         """
         Initialize the Processor with fields to be masked.
         

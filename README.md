@@ -15,8 +15,8 @@ To run the data pipeline, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone 
-cd fetch-tha
+git clone https://github.com/sameergopali/Fetch-THA.git
+cd Fetch-THA
 ```
 
 You will need the following installed on your local machine

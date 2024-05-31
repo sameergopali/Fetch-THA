@@ -29,7 +29,9 @@ class App:
         self.pg_client.connect()
 
         # Initialize sqs client
-        self.sqs_client = SqsClient(endpoint_url=config['sqs_endpoint_url'])
+        self.sqs_client = SqsClient(endpoint_url=config['sqs_endpoint_url'], 
+                                    aws_access_key=config['aws_access_key'],
+                                    aws_secret_key=config['aws_secret_key'])
         self.sqs_client.connect()
         self.processor =  Processor()
         
@@ -94,6 +96,8 @@ if __name__ == "__main__":
         'db_user': os.getenv('DB_USER'),
         'db_password': os.getenv('DB_PASSWORD'),
         'db_port':os.getenv('DB_PORT'),
+        'aws_access_key':os.getenv('aws_access_key'),
+        'aws_secret_key':os.getenv('aws_secret_key'),
         'sqs_endpoint_url': 'http://localhost:4566',
         'sqs_queue_url': 'http://localhost:4566/000000000000/login-queue',
         'log_level':"INFO"
