@@ -7,7 +7,7 @@
 4. [Questions](#questions)
 5. [Next Steps](#next-steps)
 ### Task
-The task is to create a data pipeline that fetches messages from an AWS SQS queue, processes these messages by masking user_id and ip fields, stores the processed records into a PostgreSQL database.
+The task is to create a data pipeline that fetches messages from an AWS SQS queue, processes these messages by masking device_id and ip fields, stores the processed records into a PostgreSQL database.
 
 ### How to Run
 To run the data pipeline, follow these steps:
