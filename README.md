@@ -29,12 +29,6 @@ Setup python virtual environmet
 python3 -m venv env
 ```
 
-
-Install python dependencies
-```bash
-pip install -r requirements.txt
-```
-
 Activate environment for Linux/macos
 ```bash
 source env/bin/activate
@@ -44,6 +38,12 @@ Activate enviornment for Windows
 ```
 env\Scripts\activate
 ```
+
+Install python dependencies
+```bash
+pip install -r requirements.txt
+```
+
 3. Run docker containers:
 ```bash
 docker compose up -d
