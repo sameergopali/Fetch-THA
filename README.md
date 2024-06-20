@@ -1,4 +1,4 @@
-# Fetch Rewards - Data Engineering Challenge
+Data Engineering Challenge
 
 ## Table of Contents
 1. [Task](#task)
